@@ -1,58 +1,153 @@
-// console.log('iftekher mahmud pervez')
-
-
-// education popup show
-
-let education =document.querySelector("form .education"),
-    add_btn =document.querySelector("form button");
-
-// console.log(add_btn);
+// jquery plugin for javascripts
 
 
 
+// windows form refresh not reset data
 
-// education popup show
+    // local storage save value functionality
 
+    function  local_save(id,name) {
+      
+    $(`#${id}`).on("blur",function() {
+       localStorage.setItem(`${name}`,$(`#${id}`).val()) 
+    })
+    $(`#${id}`).val(localStorage.getItem(`${name}`))  
 
-
-
-// section 2 study time auto pickup
-
-let start_date = document.querySelector("#start-date"),
-    end_date = document.querySelector("#end-date"),
-    durations = document.querySelector("#study-time");
-
-
-
-function change() {  
-
-        const start_data = new Date(start_date.value)
-       const start_year = start_data.getFullYear()
-    
-        const end_data = new Date(end_date.value)
-       const end_year = end_data.getFullYear()
-
-        durations.value = end_year - start_year +' '+ "years"
-
-}
-
-// section 2 study time auto pickup
-
-
-class car {
-    constructor( name,roll) {
-        this.name = name;
-        this.roll = roll;
-    
     }
-}
+    // local storage save value functionality
 
 
-mycar1 = new car("iftekher",200)
+    // form section one 
+    local_save("fname","frist_name")
+    local_save("lname","last_name")
+    local_save("a-designation","a-designation")
+    local_save("email","email")
+    local_save("phone","phone")
+    local_save("brith-date","brith-date")
+    local_save("pre_address","pre_address")
+    local_save("par_address","par_address")
+    local_save("gender","gender")
+    // form section one
 
-mycar2 = new car("mahmud",400)
 
-console.log(mycar1,mycar2)
+
+    // form section two
+    local_save("career-objective","career-objective")
+    local_save("e-institute","e-institute")
+    local_save("e-start-date","e-start-date")
+    local_save("e-end-date","e-end-date")
+    local_save("e-duration","e-duration")
+    local_save("e-department","e-department")
+    local_save("degree","degree")
+    local_save("result","result")
+    local_save("technical-skills","technical-skills")
+    local_save("comunication-lan","comunication-lan")
+    local_save("hobby","hobby")
+    // form section two
+
+
+    // form section three
+    local_save("cariculam-activity","cariculam-activity")
+    local_save("c-institute","c-institute")
+    local_save("c-start-date","hobby")
+    local_save("c-end-date","c-end-date")
+    local_save("c-duration","c-duration")
+    local_save("c-designation","c-designation")
+    local_save("c-designation","c-designation")
+    local_save("cv-resume","cv-resume")
+    // form section three
+
+
+
+
+
+
+// windows form refresh not reset data
+
+
+
+
+
+
+
+
+    // $("#lname").on("blur",function() {
+    //     localStorage.setItem("frist_name",$("#fname").val()) 
+    // })
+    // $("#fname").val(localStorage.getItem("frist_name"))
+
+
+    // $("").on("",function() {
+    //     localStorage.setItem("frist_name",$("#fname").val()) 
+    // })
+    // $("#fname").val(localStorage.getItem("frist_name"))
+
+
+    // $("").on("",function() {
+    //     localStorage.setItem("frist_name",$("#fname").val()) 
+    // })
+    // $("#fname").val(localStorage.getItem("frist_name"))
+
+
+
+    // $("").on("",function() {
+    //     localStorage.setItem("frist_name",$("#fname").val()) 
+    // })
+    // $("#fname").val(localStorage.getItem("frist_name"))
+
+
+
+    // $("").on("",function() {
+    //     localStorage.setItem("frist_name",$("#fname").val()) 
+    // })
+    // $("#fname").val(localStorage.getItem("frist_name"))
+
+
+
+    // $("").on("",function() {
+    //     localStorage.setItem("frist_name",$("#fname").val()) 
+    // })
+    // $("#fname").val(localStorage.getItem("frist_name"))
+
+
+
+
+
+
+
+
+
+
+//   jquery plugin for javascripts
+
+
+// section 2 study time auto pickup
+
+
+
+
+
+// section 2 study time auto pickup
+
+
+
+
+
+// class car {
+//     constructor( name,roll) {
+//         this.name = name;
+//         this.roll = roll;
+    
+//     }
+// }
+
+
+// mycar1 = new car("iftekher",200)
+
+// mycar2 = new car("mahmud",400)
+// mycar3 = new car("pervez",600)
+
+// console.log(mycar1,mycar2,mycar3)
 
   
 

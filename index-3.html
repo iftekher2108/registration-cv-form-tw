@@ -18,7 +18,6 @@
                 class="capitalize font-gabarito text-center lg:text-4xl md:text-2xl sm:text-sm my-5 font-bold text-cyan-500">
                 registration form</h1>
 
-            <!-- <img src="src/image/show.png" class="w-3/6 h-40 self-center " alt=""> -->
 
             <form action="" class="flex items-center  flex-col justify-center p-6 " method="post"
                 enctype="multipart/form-data">
@@ -49,7 +48,7 @@
                     <label for="cariculam-activity" class="mb-1 text-cyan-500 font-bold text-opacity-75">Cariculam
                         Activity</label>
                     <textarea name="activity" id="cariculam-activity"
-                        class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                        class="w-full lg:mb-0 md:mb-2 resize-none sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
                         placeholder="Cariculam Activity" rows="4"></textarea>
                 </div>
                 <!-- career objective -->
@@ -64,31 +63,33 @@
                             (Optional)</label>
                         <input type="text"
                             class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                            name="institute" id="institute" placeholder="Institute Name">
+                            name="c_institute" id="c-institute" placeholder="Institute Name">
                     </div>
 
 
                     <div class="w-full lg:flex flex-row gap-2 lg:mb-2">
-                        <div class="w-full">
-                            <label for="Duration" class="mb-1 text-cyan-500 font-bold text-opacity-75">Duration</label>
-                            <input type="text"
-                                class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                                name="work_time" id="duration" placeholder="Work Time" autocomplete="off">
-                        </div>
+            
 
                         <div class="w-full">
                             <label for="start-date" class="mb-1 text-cyan-500 font-bold text-opacity-75">Start
                                 Date</label>
                             <input type="date"
                                 class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                                name="start_date" id="start-date" placeholder="Start Date">
+                                name="c_start_date" id="c-start-date" placeholder="Start Date">
                         </div>
 
                         <div class="w-full">
                             <label for="end-date" class="mb-1 text-cyan-500 font-bold text-opacity-75">End Date</label>
                             <input type="date"
                                 class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                                name="end_date" id="end-date" placeholder="End Date">
+                                name="c_end_date" id="c-end-date" placeholder="End Date">
+                        </div>
+
+                        <div class="w-full">
+                            <label for="Duration" class="mb-1 text-cyan-500 font-bold text-opacity-75">Duration</label>
+                            <input type="text"
+                                class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                name="c_duration" id="c-duration" placeholder="Work Time" autocomplete="off">
                         </div>
 
                     </div>
@@ -101,16 +102,16 @@
                             </label>
                             <input type="text"
                                 class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                                name="designation" id="designation" placeholder="Designation">
+                                name="c_designation" id="c-designation" placeholder="Designation">
                         </div>
 
-                        <div class="md:w-full sm:w-full lg:w-2/3 ">
+                        <!-- <div class="md:w-full sm:w-full lg:w-2/3 ">
                             <label for="lname" class="mb-1 text-cyan-500 font-bold text-opacity-75">CGPA/GPA
                                 Scale</label>
                             <input type="text"
                                 class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
                                 name="lname" id="lname" placeholder="Last Name" autocomplete="off">
-                        </div>
+                        </div> -->
 
                     </div>
 
@@ -118,11 +119,13 @@
 
                 <!-- educational qualification -->
 
-                <!-- education add btn -->
-                <button
+                <!-- company add btn -->
+
+                <!-- <button
                     class=" w-1/2 transition-all  duration-300 ease-in-out hover:opacity-70 bg-cyan-500 self-end text-white font-semibold  lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 ">Add
-                    New</button>
-                <!-- education add btn -->
+                    New</button> -->
+
+                <!-- company add btn -->
 
 
 
@@ -216,10 +219,10 @@
 
 
                 <div class="w-full ">
-                    <label for="lname" class="mb-1 text-cyan-500 font-bold text-opacity-75">Submit Resume</label>
+                    <label for="cv-resume" class="mb-1 text-cyan-500 font-bold text-opacity-75">Submit Resume</label>
                     <input type="file"
                         class="w-full mb-2  file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-cyan-500 file:text-white hover:file:bg-cyan-800 px-4 py-1 rounded-full text-white focus:outline-none focus:file:ring-2 focus:file:ring-cyan-500 "
-                        name="lname" id="lname" placeholder="Last Name" autocomplete="off">
+                        name="cv_resume" id="cv-resume" placeholder="Last Name" autocomplete="off">
                 </div>
 
 
@@ -245,7 +248,7 @@
 
 
 
-
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="src/js/main.js"></script>
 </body>
 

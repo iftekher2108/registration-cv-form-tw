@@ -16,11 +16,4 @@ else {
     echo " connection failed";
 }
 
-
-
-
-
-
-
-
 ?>

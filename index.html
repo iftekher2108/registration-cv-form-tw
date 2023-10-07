@@ -17,7 +17,6 @@
             <h1 class="capitalize font-gabarito text-center lg:text-4xl md:text-2xl sm:text-sm my-5 font-bold text-cyan-500">
                 registration form</h1>
 
-            <!-- <img src="src/image/show.png" class="w-3/6 h-40 self-center " alt=""> -->
 
             <form action="" class="flex items-center  flex-col justify-center p-6 " method="post"
                 enctype="multipart/form-data">
@@ -39,10 +38,10 @@
                 </div>
 
                 <div class="w-full mb-2">
-                    <label for="designation" class="mb-1 text-cyan-500 font-bold text-opacity-75">designation</label>
+                    <label for="designation" class="mb-1 text-cyan-500 font-bold text-opacity-75">Designation / Apply</label>
                     <input type="text"
                         class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                        name="designation" id="designation" placeholder="Designation">
+                        name="a_designation" id="a-designation" placeholder="Designation">
                 </div>
 
                 <div class="w-full mb-2">
@@ -52,12 +51,12 @@
                         name="email" id="email" placeholder="E-mail">
                 </div>
 
-                <div class="w-full email mb-2 hidden">
+                <!-- <div class="w-full email mb-2 hidden">
                     <label for="re_email" class="mb-1 text-cyan-500 font-bold text-opacity-75">Confirmed E-mail</label>
                     <input type="email"
                         class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
                         name="re_email" id="re_email" placeholder="Confrim Email">
-                </div>
+                </div> -->
 
                 <div class="w-full mb-2">
                     <label for="phone" class="mb-1 text-cyan-500 font-bold text-opacity-75">Phone</label>
@@ -70,28 +69,33 @@
                     <label for="date" class="mb-1 text-cyan-500 font-bold text-opacity-75">Brith Date</label>
                     <input type="date"
                         class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                        name="date" id="date" placeholder="Date">
+                        name="brith_date" id="brith-date" placeholder="Date">
                 </div>
 
                 <div class="w-full mb-2">
                     <label for="pre_address" class="mb-1 text-cyan-500 font-bold text-opacity-75">Present
                         Address</label>
-                    <input type="text"
-                        class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                        name="present_address" id="pre_address" placeholder="Present Address">
-                </div>
+
+                        <textarea name="present_address" id="pre_address"
+                        class="w-full lg:mb-0 md:mb-2 resize-none sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                        placeholder="Present Address" rows="3"></textarea>
+
+                    </div>
 
                 <div class="w-full mb-2">
                     <label for="par_address" class="mb-1 text-cyan-500 font-bold text-opacity-75">Parmanent
                         Address</label>
-                    <input type="text"
-                        class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                        name="parmanent_address" id="par_address" placeholder="parmanent Address">
-                </div>
+
+                        <textarea name="parmanent_address" id="par_address"
+                        class="w-full lg:mb-0 md:mb-2 resize-none sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                        placeholder="Parmanent Address" rows="3"></textarea>
+
+                
+                    </div>
 
 
                 <div class="w-full mb-2">
-                    <label for="par_address" class="mb-1 text-cyan-500 font-bold text-opacity-75">Gender</label>
+                    <label for="gender" class="mb-1 text-cyan-500 font-bold text-opacity-75">Gender</label>
 
                     <select name="gender"
                         class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500"
@@ -121,8 +125,9 @@
     
 
 
-
+   <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="src/js/main.js"></script>
+
 </body>
 
 </html>

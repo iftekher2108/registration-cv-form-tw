@@ -796,6 +796,10 @@ video {
   display: list-item;
 }
 
+.\!hidden {
+  display: none !important;
+}
+
 .hidden {
   display: none;
 }
@@ -813,10 +817,6 @@ video {
 }
 
 .w-1\/2 {
-  width: 50%;
-}
-
-.w-2\/4 {
   width: 50%;
 }
 
@@ -2358,6 +2358,11 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.\!invert {
+  --tw-invert: invert(100%) !important;
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
+}
+
 .invert {
   --tw-invert: invert(100%);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -2597,10 +2602,6 @@ video {
     width: 100%;
   }
 
-  .sm\:p-3 {
-    padding: 0.75rem;
-  }
-
   .sm\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -2622,10 +2623,6 @@ video {
 
   .md\:w-full {
     width: 100%;
-  }
-
-  .md\:p-10 {
-    padding: 2.5rem;
   }
 
   .md\:text-2xl {
@@ -2658,10 +2655,6 @@ video {
 
   .lg\:w-2\/4 {
     width: 50%;
-  }
-
-  .lg\:p-10 {
-    padding: 2.5rem;
   }
 
   .lg\:text-4xl {
