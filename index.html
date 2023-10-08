@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>section 1 CV form </title>
     <link rel="stylesheet" href="dist/output.css">
+
+
 </head>
 
 <body>
@@ -19,7 +21,7 @@
                 registration form</h1>
 
 
-            <form action="" class="flex items-start h-screen   overflow-hidden relative  justify-center p-6 " method="post"
+            <form action="./server/action.php" class="flex items-start h-screen   overflow-x-hidden relative  justify-center p-6 " method="post"
                 enctype="multipart/form-data">
                 <div id="form-section-1" class="">
 
@@ -106,7 +108,7 @@
                     </div>
 
                     <button id="btn-section-1"
-                        class="w-1/2 my-12 transition-all duration-300 ease-in-out hover:opacity-70 bg-gradient-to-l from-blue-400 via-teal-600 to-green-400 hover:bg-gradient-to-r self-end text-white font-semibold  lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500">Next
+                        class="w-full my-12 transition-all duration-300 ease-in-out hover:opacity-70 bg-gradient-to-l from-blue-400 via-teal-600 to-green-400 hover:bg-gradient-to-r self-end text-white font-semibold  lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500">Next
                         Step</button>
 
 
@@ -357,12 +359,12 @@
                 <!-- educational qualification -->
 
 
-                <div class="w-full ">
+                <!-- <div class="w-full ">
                     <label for="cv-resume" class="mb-1 text-cyan-500 font-bold text-opacity-75">Submit Resume</label>
                     <input type="file"
                         class="w-full mb-2  file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-cyan-500 file:text-white hover:file:bg-cyan-800 px-4 py-1 rounded-full text-white focus:outline-none focus:file:ring-2 focus:file:ring-cyan-500 "
-                        name="cv_resume" id="cv-resume" placeholder="Last Name" autocomplete="off">
-                </div>
+                        name="cv_resume" id="cv-resume" >
+                </div> -->
 
 
 
@@ -375,7 +377,7 @@
                       <button id="btn-section-3-prev"
                     class=" w-full my-12 transition-all duration-300 ease-in-out hover:opacity-70 bg-gradient-to-l from-blue-400 via-teal-600 to-green-400 hover:bg-gradient-to-r self-end text-white font-semibold  lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500">Previous Step</button>
 
-                    <input type="submit" value="Submit"
+                    <input type="submit" value="Submit" id="local-clear"
                         class=" w-full my-12 transition-all duration-300 ease-in-out hover:opacity-70 bg-gradient-to-l from-blue-400 via-teal-600 to-green-400 hover:bg-gradient-to-r self-end text-white font-semibold  lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500">    
                     </div>
                  

@@ -2,76 +2,6 @@
 
 
 
-// windows form refresh not reset data
-
-    // local storage save value functionality
-
-    function  local_save(id,name) {
-      
-    $(`#${id}`).on("input",function() {
-       localStorage.setItem(`${name}`,$(`#${id}`).val()) 
-    })
-    $(`#${id}`).val(localStorage.getItem(`${name}`))  
-
-    }
-    // local storage save value functionality
-
-
-
-    if(!$("#form-section-1").hasClass("hidden")) {
-
-        // form section one 
-    local_save("fname","frist_name")
-    local_save("lname","last_name")
-    local_save("a-designation","a-designation")
-    local_save("email","email")
-    local_save("phone","phone")
-    local_save("brith-date","brith-date")
-    local_save("pre_address","pre_address")
-    local_save("par_address","par_address")
-    local_save("gender","gender")
-    // form section one
-    
-    }
-    else if (!$("#form-section-2").hasClass("hidden")) {
-
-    // form section two
-    local_save("career-objective","career-objective")
-    local_save("e-institute","e-institute")
-    local_save("e-start-date","e-start-date")
-    local_save("e-end-date","e-end-date")
-    local_save("e-duration","e-duration")
-    local_save("e-department","e-department")
-    local_save("degree","degree")
-    local_save("result","result")
-    local_save("technical-skills","technical-skills")
-    local_save("comunication-lan","comunication-lan")
-    local_save("hobby","hobby")
-    // form section two
-
-
-    }
-    else {
-
-
-    // form section three
-    local_save("cariculam-activity","cariculam-activity")
-    local_save("c-institute","c-institute")
-    local_save("c-start-date","hobby")
-    local_save("c-end-date","c-end-date")
-    local_save("c-duration","c-duration")
-    local_save("c-designation","c-designation")
-    local_save("c-designation","c-designation")
-    local_save("cv-resume","cv-resume")
-    // form section three
-
-
-    }
-
-
-// windows form refresh not reset data
-
-
 // form section one hide 
 
 
@@ -145,6 +75,79 @@ $("#btn-section-3-prev").click(function(e){
 
 
 
+
+
+// windows form refresh not reset data
+
+    // local storage save value functionality
+
+    function  local_save(id,name) {
+      
+    $(`#${id}`).on("input",function() {
+       localStorage.setItem(`${name}`,$(`#${id}`).val()) 
+    })
+    $(`#${id}`).val(localStorage.getItem(`${name}`))  
+
+    }
+    // local storage save value functionality
+
+
+
+
+        // form section one 
+    local_save("fname","frist_name")
+    local_save("lname","last_name")
+    local_save("a-designation","a-designation")
+    local_save("email","email")
+    local_save("phone","phone")
+    local_save("brith-date","brith-date")
+    local_save("pre_address","pre_address")
+    local_save("par_address","par_address")
+    local_save("gender","gender")
+    // form section one
+    
+
+    // form section two
+    local_save("career-objective","career-objective")
+    local_save("e-institute","e-institute")
+    local_save("e-start-date","e-start-date")
+    local_save("e-end-date","e-end-date")
+    local_save("e-duration","e-duration")
+    local_save("e-department","e-department")
+    local_save("degree","degree")
+    local_save("result","result")
+    local_save("technical-skills","technical-skills")
+    local_save("comunication-lan","comunication-lan")
+    local_save("hobby","hobby")
+    // form section two
+
+
+
+
+    // form section three
+    local_save("cariculam-activity","cariculam-activity")
+    local_save("c-institute","c-institute")
+    local_save("c-start-date","hobby")
+    local_save("c-end-date","c-end-date")
+    local_save("c-duration","c-duration")
+    local_save("c-designation","c-designation")
+    local_save("c-designation","c-designation")
+    // form section three
+
+
+
+
+// windows form refresh not reset data
+
+
+
+
+$("#local-clear").on("click",function() {
+    localStorage.clear();
+    sessionStorage.clear()
+})
+
+console.log($("#local-clear"));
 
 
     // $("#lname").on("blur",function() {

@@ -2462,6 +2462,10 @@ video {
   content: var(--tw-content);
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

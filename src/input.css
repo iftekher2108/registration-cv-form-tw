@@ -3,3 +3,8 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@500&family=Dosis&family=Gabarito&family=Lato&family=Open+Sans&family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono&family=Roboto+Slab&family=Roboto:wght@700&display=swap');
+
+
+::-webkit-scrollbar {
+    width: 0px;
+}
