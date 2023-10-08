@@ -8,7 +8,7 @@
 
     function  local_save(id,name) {
       
-    $(`#${id}`).on("blur",function() {
+    $(`#${id}`).on("input",function() {
        localStorage.setItem(`${name}`,$(`#${id}`).val()) 
     })
     $(`#${id}`).val(localStorage.getItem(`${name}`))  
@@ -17,7 +17,10 @@
     // local storage save value functionality
 
 
-    // form section one 
+
+    if(!$("#form-section-1").hasClass("hidden")) {
+
+        // form section one 
     local_save("fname","frist_name")
     local_save("lname","last_name")
     local_save("a-designation","a-designation")
@@ -28,8 +31,9 @@
     local_save("par_address","par_address")
     local_save("gender","gender")
     // form section one
-
-
+    
+    }
+    else if (!$("#form-section-2").hasClass("hidden")) {
 
     // form section two
     local_save("career-objective","career-objective")
@@ -46,6 +50,10 @@
     // form section two
 
 
+    }
+    else {
+
+
     // form section three
     local_save("cariculam-activity","cariculam-activity")
     local_save("c-institute","c-institute")
@@ -58,12 +66,80 @@
     // form section three
 
 
-
-
+    }
 
 
 // windows form refresh not reset data
 
+
+// form section one hide 
+
+
+
+$("#btn-section-1").click(function(e){
+    e.preventDefault()
+    $("#form-section-1").animate({
+        height:"0px",
+        opacity:"0",
+    })
+    $("#form-section-2").animate({ left: "0%" })
+
+
+})
+
+
+// form section one hide
+
+
+
+// form section two prev 
+
+$("#btn-section-2-prev").click(function(e){
+    e.preventDefault()
+ 
+    $("#form-section-2").animate({ left: "100%" })
+       $("#form-section-1").animate({
+        opacity:"1",
+        height:"100%",
+    })
+
+})
+
+
+// form section two prev
+
+
+// form section two hide
+
+$("#btn-section-2").click(function(e){
+    e.preventDefault()
+    $("#form-section-2").animate({
+        opacity:"0",
+        right:"100%"})
+    $("#form-section-3").animate({
+        opacity:"1",
+        left:"0%"})
+
+})
+
+// form section two hide  
+
+
+// form section three prev
+
+$("#btn-section-3-prev").click(function(e){
+    e.preventDefault()
+    $("#form-section-2").animate({
+        opacity:"1",
+        right:"0%"})
+    $("#form-section-3").animate({
+        opacity:"0",
+        left:"100%"})
+
+})
+
+
+// form section three prev
 
 
 

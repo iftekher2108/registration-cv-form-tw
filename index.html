@@ -14,107 +14,387 @@
         style="background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(src/image/show.png); background-size: cover; background-position: right; background-repeat: no-repeat; background-attachment: fixed;">
 
         <div class="h-auto lg:w-2/4 md:w-2/4 sm:w-full bg-slate-800 flex flex-col rounded-2xl shadow-xl">
-            <h1 class="capitalize font-gabarito text-center lg:text-4xl md:text-2xl sm:text-sm my-5 font-bold text-cyan-500">
+            <h1
+                class="capitalize font-gabarito text-center lg:text-4xl md:text-2xl sm:text-sm my-5 font-bold text-cyan-500">
                 registration form</h1>
 
 
-            <form action="" class="flex items-center  flex-col justify-center p-6 " method="post"
+            <form action="" class="flex items-start h-screen   overflow-hidden relative  justify-center p-6 " method="post"
                 enctype="multipart/form-data">
-                <div class="w-full lg:flex flex-row gap-2 lg:mb-2">
-                    <div class="w-full">
-                        <label for="fname" class="mb-1 text-cyan-500 font-bold text-opacity-75">First Name</label>
-                        <input type="text"
-                            class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                            name="fname" id="fname" placeholder="First Name">
+                <div id="form-section-1" class="">
+
+                    <div class="w-full lg:flex flex-row gap-2 lg:mb-2">
+                        <div class="w-full">
+                            <label for="fname" class="mb-1 text-cyan-500 font-bold text-opacity-75">First Name</label>
+                            <input type="text"
+                                class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                name="fname" id="fname" placeholder="First Name" required>
+                        </div>
+
+                        <div class="w-full">
+                            <label for="lname" class="mb-1 text-cyan-500 font-bold text-opacity-75">Last Name</label>
+                            <input type="text"
+                                class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                name="lname" id="lname" placeholder="Last Name" required>
+                        </div>
+
                     </div>
 
-                    <div class="w-full">
-                        <label for="lname" class="mb-1 text-cyan-500 font-bold text-opacity-75">Last Name</label>
+                    <div class="w-full mb-2">
+                        <label for="a-designation" class="mb-1 text-cyan-500 font-bold text-opacity-75">Designation /
+                            Apply</label>
                         <input type="text"
                             class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                            name="lname" id="lname" placeholder="Last Name">
+                            name="a_designation" id="a-designation" placeholder="Designation" required>
                     </div>
 
-                </div>
+                    <div class="w-full mb-2">
+                        <label for="email" class="mb-1 text-cyan-500 font-bold text-opacity-75">E-mail</label>
+                        <input type="email"
+                            class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                            name="email" id="email" placeholder="E-mail" autocomplete="off" required>
+                    </div>
 
-                <div class="w-full mb-2">
-                    <label for="designation" class="mb-1 text-cyan-500 font-bold text-opacity-75">Designation / Apply</label>
-                    <input type="text"
-                        class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                        name="a_designation" id="a-designation" placeholder="Designation">
-                </div>
 
-                <div class="w-full mb-2">
-                    <label for="email" class="mb-1 text-cyan-500 font-bold text-opacity-75">E-mail</label>
-                    <input type="email"
-                        class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                        name="email" id="email" placeholder="E-mail">
-                </div>
 
-                <!-- <div class="w-full email mb-2 hidden">
-                    <label for="re_email" class="mb-1 text-cyan-500 font-bold text-opacity-75">Confirmed E-mail</label>
-                    <input type="email"
-                        class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                        name="re_email" id="re_email" placeholder="Confrim Email">
-                </div> -->
+                    <div class="w-full mb-2">
+                        <label for="phone" class="mb-1 text-cyan-500 font-bold text-opacity-75">Phone</label>
+                        <input type="text"
+                            class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                            name="phone" id="phone" placeholder="Phone" autocomplete="off" required>
+                    </div>
 
-                <div class="w-full mb-2">
-                    <label for="phone" class="mb-1 text-cyan-500 font-bold text-opacity-75">Phone</label>
-                    <input type="text"
-                        class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                        name="phone" id="phone" placeholder="Phone">
-                </div>
+                    <div class="w-full mb-2">
+                        <label for="brith-date" class="mb-1 text-cyan-500 font-bold text-opacity-75">Brith Date</label>
+                        <input type="date"
+                            class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                            name="brith_date" id="brith-date" placeholder="Brith Date" required>
+                    </div>
 
-                <div class="w-full mb-2">
-                    <label for="date" class="mb-1 text-cyan-500 font-bold text-opacity-75">Brith Date</label>
-                    <input type="date"
-                        class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                        name="brith_date" id="brith-date" placeholder="Date">
-                </div>
-
-                <div class="w-full mb-2">
-                    <label for="pre_address" class="mb-1 text-cyan-500 font-bold text-opacity-75">Present
-                        Address</label>
+                    <div class="w-full mb-2">
+                        <label for="pre_address" class="mb-1 text-cyan-500 font-bold text-opacity-75">Present
+                            Address</label>
 
                         <textarea name="present_address" id="pre_address"
-                        class="w-full lg:mb-0 md:mb-2 resize-none sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                        placeholder="Present Address" rows="3"></textarea>
+                            class="w-full lg:mb-0 md:mb-2 resize-none sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                            placeholder="Present Address" rows="3" required></textarea>
 
                     </div>
 
-                <div class="w-full mb-2">
-                    <label for="par_address" class="mb-1 text-cyan-500 font-bold text-opacity-75">Parmanent
-                        Address</label>
+                    <div class="w-full mb-2">
+                        <label for="par_address" class="mb-1 text-cyan-500 font-bold text-opacity-75">Parmanent
+                            Address</label>
 
                         <textarea name="parmanent_address" id="par_address"
-                        class="w-full lg:mb-0 md:mb-2 resize-none sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                        placeholder="Parmanent Address" rows="3"></textarea>
+                            class="w-full lg:mb-0 md:mb-2 resize-none sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                            placeholder="Parmanent Address" rows="3" required></textarea>
 
-                
+
                     </div>
 
 
-                <div class="w-full mb-2">
-                    <label for="gender" class="mb-1 text-cyan-500 font-bold text-opacity-75">Gender</label>
+                    <div class="w-full mb-2">
+                        <label for="gender" class="mb-1 text-cyan-500 font-bold text-opacity-75">Gender</label>
 
-                    <select name="gender"
-                        class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                        id="gender">
-                        <option value="defualt" selected>Not select</option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                    </select>
+                        <select name="gender"
+                            class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                            id="gender" required>
+                            <option value="defualt" selected>Not select</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+
+                    <button id="btn-section-1"
+                        class="w-1/2 my-12 transition-all duration-300 ease-in-out hover:opacity-70 bg-gradient-to-l from-blue-400 via-teal-600 to-green-400 hover:bg-gradient-to-r self-end text-white font-semibold  lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500">Next
+                        Step</button>
+
+
+
+
+
+
                 </div>
 
-                <input type="submit"
-                    class="w-1/2 my-12 transition-all duration-300 ease-in-out hover:opacity-70 bg-gradient-to-l from-blue-400 via-teal-600 to-green-400 hover:bg-gradient-to-r self-end text-white font-semibold  lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                    value="Next Step">
+                <!-- form section one -->
+
+
+
+
+                <!-- form section two -->
+                <div id="form-section-2" class=" absolute m-6 left-full">
+
+
+                    
+                <!-- career objective -->
+                <div class="w-full mb-2">
+                    <label for="career-objective" class="mb-1 text-cyan-500 font-bold text-opacity-75">Career
+                        Objective</label>
+                    <textarea name="career_objective" id="career-objective"
+                        class="w-full lg:mb-0 md:mb-2 resize-none sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                        placeholder="Career Objective" rows="4" required></textarea>
+                </div>
+                <!-- career objective -->
+
+
+                <!-- education qualification -->
+                <div class="education w-full">
+                    <div class="w-full mb-2">
+                        <label for="e-institute"
+                            class="mb-1 text-cyan-500 font-bold text-opacity-75">School/College/University </label>
+                        <input type="text"
+                            class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 capitalize shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                            name="e_institute" id="e-institute" placeholder="Institute Name" required>
+                    </div>
+
+
+                    <div class="w-full lg:flex flex-row gap-2 lg:mb-2">
+
+
+                        <div class="w-full">
+                            <label for="e-start-date" class="mb-1 text-cyan-500 font-bold text-opacity-75">Start
+                                Date</label>
+                            <input type="date"
+                                class="w-full lg:mb-0 md:mb-2 sm:mb-2 capitalize px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                name="e_start_date" onchange="year_calculate()" id="e-start-date" placeholder="Start Date" required>
+                        </div>
+
+                        <div class="w-full">
+                            <label for="e-end-date" class="mb-1 text-cyan-500 font-bold text-opacity-75">End Date</label>
+                            <input type="date"
+                                class="w-full lg:mb-0 md:mb-2 capitalize sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                name="e_end_date" onchange="year_calculate()" id="e-end-date" placeholder="End Date" required>
+                        </div>
+
+                        <div class="w-full">
+                            <label for="e-duration" class="mb-1 text-cyan-500 font-bold text-opacity-75">Study
+                                Time</label>
+                            <input type="text"
+                                class="w-full lg:mb-0 md:mb-2 sm:mb-2 capitalize px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                name="e_duration" id="e-duration" placeholder="Study Time" autocomplete="off" required>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="w-full lg:flex flex-row gap-2 mb-2">
+                        <div class="w-full">
+                            <label for="e-department"
+                                class="mb-1 text-cyan-500 font-bold text-opacity-75">Department/Subject </label>
+                            <input type="text"
+                                class="w-full lg:mb-0 md:mb-2 sm:mb-2 capitalize px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                name="e_department" id="e-department" placeholder="Study Subject" required>
+                        </div>
+
+                        <div class="w-full">
+                            <label for="degree" class="mb-1 text-cyan-500 font-bold text-opacity-75">Degree </label>
+                            <input type="text"
+                                class="w-full lg:mb-0 md:mb-2 sm:mb-2 capitalize px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                name="degree" id="degree" placeholder="Degree" required>
+                        </div>
+
+                        <div class="w-full  ">
+                            <label for="result" class="mb-1 text-cyan-500 font-bold text-opacity-75">CGPA/GPA
+                                Scale</label>
+                            <input type="text"
+                                class="w-full lg:mb-0 md:mb-2 sm:mb-2 capitalize px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                name="result" id="result" placeholder="Result" autocomplete="off" required>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- educational qualification -->
+
+                <!-- education add btn -->
+
+                <button
+                    class=" w-1/2 transition-all   duration-300 ease-in-out hover:opacity-70 bg-cyan-500  text-white font-semibold  lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 ">Add
+                    New</button>
+
+                <!-- education add btn -->
+
+
+
+
+                <!-- technical skills -->
+                <div class="w-full mb-2">
+                    <label for="technical-skills" class="mb-1 text-cyan-500 font-bold text-opacity-75">Technical
+                        Skills</label>
+                    <textarea name="technical_skills" id="technical-skills"
+                        class="w-full lg:mb-0 md:mb-2 resize-none sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                        placeholder="Technical Skills" rows="2" required></textarea>
+                </div>
+                <!-- technical skills -->
+
+                <!-- comunication language -->
+                <div class="w-full mb-2">
+                    <label for="comunication-lan" class="mb-1 text-cyan-500 font-bold text-opacity-75">Comunication
+                        Skills</label>
+                    <textarea name="language" id="comunication-lan"
+                        class="w-full lg:mb-0 resize-none md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                        placeholder="Comunication Language" rows="1" required></textarea>
+                </div>
+
+                <!-- comunication language -->
+
+
+
+                <!-- hobby / interested -->
+
+                <div class="w-full mb-2">
+                    <label for="hobby" class="mb-1 text-cyan-500 font-bold text-opacity-75">Hobby/Interrested</label>
+                    <textarea name="hobby" id="hobby"
+                        class="w-full lg:mb-0 md:mb-2 resize-none sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                        placeholder="Hobby / Interrested" rows="3" required></textarea>
+                </div>
+
+                <!-- hobby / interested -->
+
+
+
+                <div class="flex gap-3 w-full ">
+
+                    <button id="btn-section-2-prev"
+                  class=" w-full my-12 transition-all duration-300 ease-in-out hover:opacity-70 bg-gradient-to-l from-blue-400 via-teal-600 to-green-400 hover:bg-gradient-to-r self-end text-white font-semibold  lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500">Previous Step</button>
+
+                  <button id="btn-section-2"
+                      class=" w-full my-12 transition-all duration-300 ease-in-out hover:opacity-70 bg-gradient-to-l from-blue-400 via-teal-600 to-green-400 hover:bg-gradient-to-r self-end text-white font-semibold  lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500">Next
+                      Step</button>     
+                  </div>
+                
+
+
+
+
+
+
+
+                </div>
+                <!-- form section two -->
+
+
+
+
+
+
+                <!-- form section three -->
+                <div id="form-section-3" class="absolute m-6 left-full">
+
+
+                    
+
+                <!-- career objective -->
+                <div class="w-full mb-2">
+                    <label for="cariculam-activity" class="mb-1 text-cyan-500 font-bold text-opacity-75">Cariculam
+                        Activity</label>
+                    <textarea name="activity" id="cariculam-activity"
+                        class="w-full lg:mb-0 md:mb-2 resize-none sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                        placeholder="Cariculam Activity" rows="4"></textarea>
+                </div>
+                <!-- career objective -->
+
+
+                <!-- education qualification -->
+
+                <div class="company w-full">
+
+                    <div class="w-full mb-2">
+                        <label for="c-institute" class="mb-1 text-cyan-500 font-bold text-opacity-75">Company Name
+                            </label>
+                        <input type="text"
+                            class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                            name="c_institute" id="c-institute" placeholder="Institute Name">
+                    </div>
+
+
+                    <div class="w-full lg:flex flex-row gap-2 lg:mb-2">
+            
+
+                        <div class="w-full">
+                            <label for="c-start-date" class="mb-1 text-cyan-500 font-bold text-opacity-75">Start
+                                Date</label>
+                            <input type="date"
+                                class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                name="c_start_date" id="c-start-date" placeholder="Start Date">
+                        </div>
+
+                        <div class="w-full">
+                            <label for="c-end-date" class="mb-1 text-cyan-500 font-bold text-opacity-75">End Date</label>
+                            <input type="date"
+                                class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                name="c_end_date" id="c-end-date" placeholder="End Date">
+                        </div>
+
+                        <div class="w-full">
+                            <label for="c-duration" class="mb-1 text-cyan-500 font-bold text-opacity-75">Duration</label>
+                            <input type="text"
+                                class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                name="c_duration" id="c-duration" placeholder="Work Time" autocomplete="off">
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="w-full lg:flex flex-row gap-2 mb-2">
+                        <div class="w-full">
+                            <label for="c-designation" class="mb-1 text-cyan-500 font-bold text-opacity-75">Designation
+                            </label>
+                            <input type="text"
+                                class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                name="c_designation" id="c-designation" placeholder="Designation">
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+                <!-- educational qualification -->
+
+
+                <div class="w-full ">
+                    <label for="cv-resume" class="mb-1 text-cyan-500 font-bold text-opacity-75">Submit Resume</label>
+                    <input type="file"
+                        class="w-full mb-2  file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-cyan-500 file:text-white hover:file:bg-cyan-800 px-4 py-1 rounded-full text-white focus:outline-none focus:file:ring-2 focus:file:ring-cyan-500 "
+                        name="cv_resume" id="cv-resume" placeholder="Last Name" autocomplete="off">
+                </div>
+
+
+
+
+
+
+
+                    <div class="flex gap-3 w-full ">
+
+                      <button id="btn-section-3-prev"
+                    class=" w-full my-12 transition-all duration-300 ease-in-out hover:opacity-70 bg-gradient-to-l from-blue-400 via-teal-600 to-green-400 hover:bg-gradient-to-r self-end text-white font-semibold  lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500">Previous Step</button>
+
+                    <input type="submit" value="Submit"
+                        class=" w-full my-12 transition-all duration-300 ease-in-out hover:opacity-70 bg-gradient-to-l from-blue-400 via-teal-600 to-green-400 hover:bg-gradient-to-r self-end text-white font-semibold  lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500">    
+                    </div>
+                 
+                </div>
+                <!-- form section three -->
+
+
+
 
 
 
 
 
             </form>
+
+
+
+
+
         </div>
 
 
@@ -122,10 +402,10 @@
 
 
 
-    
 
 
-   <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="src/js/main.js"></script>
 
 </body>
