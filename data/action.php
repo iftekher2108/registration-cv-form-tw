@@ -1,11 +1,12 @@
 <?php
 
-require "connection.php";
+include "./connection.php";
 
 
 
 
     $fname = $_POST['fname']; // 1
+
 
     $lname = $_POST['lname']; // 2
 
@@ -66,9 +67,9 @@ require "connection.php";
 
     if ($con->query($sql_insert) === TRUE) {
       // echo "New record created successfully";
-      return header("refresh:1, url='../index.html'");  
+      return header("refresh:0.5, url=../index.html");  
     } else {
-      echo "Error: " . $sql . "<br>" . $conn->error;
+      echo "Error: " . $sql . "<br>" . $con->error;
     }
 
 
