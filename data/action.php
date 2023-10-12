@@ -3,6 +3,19 @@
 include "./connection.php";
 
 
+// photo upload with file
+
+$photo_name = $_FILES["choosefile"]["photo"];
+
+$temp_photo_name = $_FILES["choosefile"]["tmp_photo"];  
+
+    $photo_folder = "image/".$photo_name;  
+
+    move_uploaded_file($temp_photo_name, $photo_folder);
+
+// photo upload with file
+
+
 
 
     $fname = $_POST['fname']; // 1
@@ -63,7 +76,7 @@ include "./connection.php";
   //   }
 
 
-    $sql_insert = "INSERT INTO cv_data (fname, lname, a_designation, email, phone, brith_date, present_address, parmanent_address, gender, career_objective, e_institute, e_start_date, e_end_date, e_duration, e_department, degree, result, technical_skills, language, hobby, activity, c_institute, c_start_date, c_end_date, c_duration, c_designation) VALUES ('$fname','$lname','$a_designation','$email','$phone','$brith_date','$present_address','$parmanent_address','$gender','$career_objective','$e_institute','$e_start_date','$e_end_date','$e_duration','$e_department','$degree','$result','$technical_skills','$language','$hobby','$activity','$c_institute','$c_start_date','$c_end_date','$c_duration','$c_designation')";
+    $sql_insert = "INSERT INTO cv_data (photo,fname, lname, a_designation, email, phone, brith_date, present_address, parmanent_address, gender, career_objective, e_institute, e_start_date, e_end_date, e_duration, e_department, degree, result, technical_skills, language, hobby, activity, c_institute, c_start_date, c_end_date, c_duration, c_designation) VALUES ('','$fname','$lname','$a_designation','$email','$phone','$brith_date','$present_address','$parmanent_address','$gender','$career_objective','$e_institute','$e_start_date','$e_end_date','$e_duration','$e_department','$degree','$result','$technical_skills','$language','$hobby','$activity','$c_institute','$c_start_date','$c_end_date','$c_duration','$c_designation')";
 
     if ($con->query($sql_insert) === TRUE) {
       // echo "New record created successfully";

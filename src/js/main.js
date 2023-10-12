@@ -137,6 +137,13 @@ $("#btn-section-3-prev").click(function(e){
 
 
 
+    $("#photo").on("input",function(e) {
+       var photo_path = e.target.files[0].name;
+        localStorage.setItem("photo", `${photo_path}`);
+    });
+
+    $("#photo").val(localStorage.getItem("photo"));
+
 
 // windows form refresh not reset data
 
