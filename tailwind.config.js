@@ -16,6 +16,10 @@ module.exports = {
         "robotoSlab" : [" 'Roboto Slab', serif "],
 
       },
+      colors: {
+        'top-color': '#419197',
+        'heading': '#fcfbfc',
+      },
     },
   },
   plugins:[
