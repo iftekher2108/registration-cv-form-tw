@@ -2,4 +2,5 @@
     "css.validate": false,
     "tailwindCSS.emmetCompletions": true,
     "editor.mouseWheelZoom": true,
+    "liveServer.settings.port": 5501,
 }
