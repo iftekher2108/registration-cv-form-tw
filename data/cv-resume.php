@@ -2,18 +2,21 @@
 
 include "./connection.php";
 
- $select = "SELECT * FROM cv_data WHERE id = $id";
 
- $execute = mysqli_query($con,$select);
+$id = $_GET['id'];
+
+ $select = "SELECT * FROM cv_data WHERE id = ";
+
+ $execute = mysqli_query($con,$select,$id);
+
+
 
 
  while ($row = mysqli_fetch_array($execute)) {
 
 
-    
+
  }
-
-
 
 
 ?>

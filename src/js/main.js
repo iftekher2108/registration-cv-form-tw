@@ -74,10 +74,6 @@ $("#btn-section-3-prev").click(function(e){
 
 
 
-
-
-
-
 // windows form refresh not reset data
 
     // local storage save value functionality
@@ -91,8 +87,6 @@ $("#btn-section-3-prev").click(function(e){
 
     }
     // local storage save value functionality
-
-
 
 
         // form section one 
@@ -149,53 +143,12 @@ $("#btn-section-3-prev").click(function(e){
 
 
 
-
 $("#local-clear").on("click",function() {
     localStorage.clear();
     sessionStorage.clear()
 })
 
 console.log($("#local-clear"));
-
-
-    // $("#lname").on("blur",function() {
-    //     localStorage.setItem("frist_name",$("#fname").val()) 
-    // })
-    // $("#fname").val(localStorage.getItem("frist_name"))
-
-
-    // $("").on("",function() {
-    //     localStorage.setItem("frist_name",$("#fname").val()) 
-    // })
-    // $("#fname").val(localStorage.getItem("frist_name"))
-
-
-    // $("").on("",function() {
-    //     localStorage.setItem("frist_name",$("#fname").val()) 
-    // })
-    // $("#fname").val(localStorage.getItem("frist_name"))
-
-
-
-    // $("").on("",function() {
-    //     localStorage.setItem("frist_name",$("#fname").val()) 
-    // })
-    // $("#fname").val(localStorage.getItem("frist_name"))
-
-
-
-    // $("").on("",function() {
-    //     localStorage.setItem("frist_name",$("#fname").val()) 
-    // })
-    // $("#fname").val(localStorage.getItem("frist_name"))
-
-
-
-    // $("").on("",function() {
-    //     localStorage.setItem("frist_name",$("#fname").val()) 
-    // })
-    // $("#fname").val(localStorage.getItem("frist_name"))
-
 
 
 
@@ -214,7 +167,53 @@ window.onload = function() {
 
 
 
+
+
     // ajax data display
+
+
+
+
+
+
+
+        // $("#lname").on("blur",function() {
+    //     localStorage.setItem("frist_name",$("#fname").val()) 
+    // })
+    // $("#fname").val(localStorage.getItem("frist_name"))
+
+
+    // $("").on("",function() {
+    //     localStorage.setItem("frist_name",$("#fname").val()) 
+    // })
+    // $("#fname").val(localStorage.getItem("frist_name"))
+
+
+    // $("").on("",function() {
+    //     localStorage.setItem("frist_name",$("#fname").val()) 
+    // })
+    // $("#fname").val(localStorage.getItem("frist_name"))
+
+
+
+    // $("").on("",function() {
+    //     localStorage.setItem("frist_name",$("#fname").val()) 
+    // })
+    // $("#fname").val(localStorage.getItem("frist_name"))
+
+
+
+    // $("").on("",function() {
+    //     localStorage.setItem("frist_name",$("#fname").val()) 
+    // })
+    // $("#fname").val(localStorage.getItem("frist_name"))
+
+
+
+    // $("").on("",function() {
+    //     localStorage.setItem("frist_name",$("#fname").val()) 
+    // })
+    // $("#fname").val(localStorage.getItem("frist_name"))
 
 
 
