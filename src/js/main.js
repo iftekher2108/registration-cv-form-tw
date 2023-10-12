@@ -22,6 +22,7 @@ $("#btn-section-1").click(function(e){
 
 
 
+
 // form section two prev 
 
 $("#btn-section-2-prev").click(function(e){
@@ -192,6 +193,38 @@ console.log($("#local-clear"));
 
 
 
+    // ajax data display
+
+window.onload = function() {
+
+        $("#tbody").load("./data/cv-data.php");
+
+    }
+
+
+
+
+
+
+
+    // ajax data display
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -199,34 +232,6 @@ console.log($("#local-clear"));
 
 //   jquery plugin for javascripts
 
-
-// section 2 study time auto pickup
-
-
-
-
-
-// section 2 study time auto pickup
-
-
-
-
-
-// class car {
-//     constructor( name,roll) {
-//         this.name = name;
-//         this.roll = roll;
-    
-//     }
-// }
-
-
-// mycar1 = new car("iftekher",200)
-
-// mycar2 = new car("mahmud",400)
-// mycar3 = new car("pervez",600)
-
-// console.log(mycar1,mycar2,mycar3)
 
   
 

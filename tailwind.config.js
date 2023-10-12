@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  mode:"jit",
   content: ["./*.{html,js,php}", "./**/*.{html,js,php}", "*/*.{html,js,php}"],
+  mode: 'jit',
   theme: {
     extend: {
       fontFamily: {
@@ -15,10 +15,13 @@ module.exports = {
         "robotoMono" : [" 'Roboto Mono', monospace "],
         "robotoSlab" : [" 'Roboto Slab', serif "],
 
-      }
+      },
     },
   },
-  plugins:[],
+  plugins:[
+    require('tailwindcss'),
+    require('autoprefixer'),
+  ],
 
 }
 

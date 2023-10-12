@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>cv data</title>
     <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="dark:bg-slate-800 bg-slate-600">
 
-    <div class="container">
-        <h1 class="text-center text-4xl  text-teal-400  ">cv submition data</h1>
+<body class="dark:bg-slate-800 bg-slate-600 w-full">
+
+    <div class="container mx-auto w-full">
+        <h1
+            class="text-center rounded-lg  font-bold capitalize h-full py-5 mx-20 bg-teal-400 text-4xl mt-20 text-white text-opacity-85  ">
+            cv submition data</h1>
+
+        <br><br>
+        <div id="table" class="w-full">
+            <table class="border-collapse overflow-hidden h-auto mx-auto rounded-lg">
+                <th>Sl</th>
+                <th>Photo</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>E-mail</th>
+                <th colspan="3">Action</th>
+                <tbody id="tbody">
+
+
+                </tbody>
+
+            </table>
+        </div>
 
     </div>
-    
+
 
 
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="src/js/main.js"></script>
 </body>
+
 </html>

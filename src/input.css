@@ -1,10 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@500&family=Dosis&family=Gabarito&family=Lato&family=Open+Sans&family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Mono&family=Roboto+Slab&family=Roboto:wght@700&display=swap');
+
 
 
 ::-webkit-scrollbar {
     width: 0px;
+}
+
+
+@layer components {
+    th {
+        @apply border-2 border-black/40 bg-teal-400 uppercase text-white px-8;
+    }
+
+    td {
+        @apply border-2 border-black/40 text-white px-8  text-opacity-80 font-bold;
+    }
+
+    .btn-primary {
+        @apply  hover:text-teal-400 transition-all font-normal duration-300 ease-in-out;
+    }
 }
