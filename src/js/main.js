@@ -163,6 +163,18 @@ window.onload = function() {
 
 
 
+// $("#delete").click(function(){
+
+//     $.ajax({
+//         url:"../data/delete.php",
+//         method:"DELETE",
+//         success: function() {
+//             $("#tbody").load("./data/cv-data.php");
+//         }
+//     })
+// });
+
+
 
 
 
