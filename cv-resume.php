@@ -7,6 +7,17 @@
     <title>cv data</title>
     <link rel="stylesheet" href="dist/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+
+@media print {
+    * {
+        -webkit-print-color-adjust: exact; /* For Chrome */
+        color-adjust: exact; /* For Firefox and IE */
+    }
+}
+</style>
+
 </head>
 
 <body class="dark:bg-slate-800 bg-slate-600 w-full">
@@ -35,32 +46,19 @@
 
 
 
-        <div class="container mx-auto w-full">
-            <h1 class="
-            text-center 
-            rounded-lg 
-             font-bold 
-             capitalize 
-             h-full 
-             py-5 
-             mx-20
-              bg-teal-400 
-              text-4xl mt-20
-               text-white 
-               text-opacity-85 ">
-                <?php echo $row['fname'] . " " . $row['lname']; ?> cv resume</h1>
+    
             <br><br>
 
             <!-- cv forn start here -->
 
             <div class="w-full mx-20">
-                <button class=" text-center font-bold rounded-full mx-20 bg-teal-400 py-3  px-20  text-white">Download</button>
+                <button id="print_btn" class=" text-center font-bold rounded-full mx-20 bg-teal-400 py-3  px-20  text-white">Download</button>
 
             </div>
 
 
 
-            <div class=" lg:px-40 md:px-20 my-10">
+            <div id="cv_format" class=" lg:px-40 md:px-20 my-10">
 
                 <div class="border-1 -z-20 bg-gray-200 ">
 
@@ -69,11 +67,12 @@
                         <div class=" top-0 -left-2  select-none  absolute">
                             <img src="./src/image/teal-color.png" alt="header-img">
                         </div>
-                        <div class="h-36 w-36 overflow-hidden rounded-full ml-5  z-20  mx-10  p-5">
-                            <img src="<?php echo $row['photo'];?>" class="rounded-full" />
+                        <div class="h-40 w-40 aspect-video overflow-hidden z-20  mx-10  p-5">
+                            <img src="./upload/<?php echo $row['photo'];?>" class="rounded-lg mb-3 "/>
                         </div>
 
                         <div class="w-2/3 sm:text-center pl-5 z-10 mt-10 text-start">
+                            
                             <p class="font-poppins text-right  font-bold text-white sm:text-4xl text-2xl">
                                 <?php echo $row['fname'] . " " . $row['lname']; ?>
                             </p>
@@ -87,7 +86,7 @@
 
                         <div class="flex flex-col gap-3 sm:flex-row ">
 
-                            <div class="flex flex-col p-5 relative bg-slate-700 overflow-hidden text-white text-opacity-80  sm:w-1/3">
+                            <div style="background-color: <?php echo $color ="#333333"; ?> ;" class="flex flex-col p-5 relative  overflow-hidden text-white text-opacity-80  sm:w-1/3">
 
                                 <!-- <div class=" top-0 left-0 select-none absolute">
                                 <img src="./src/image/slide-color.png" class="h-[] w-full " alt="header-img">
@@ -384,11 +383,11 @@
 
 
                                 <!-- refarence details-->
-                                <div class="py-3">
+                                <div class="py-3 text-sm">
                                     <h2 class="text-lg font-poppins font-bold text-top-color">Reference</h2>
                                     <div class="border-2 w-36 border-top-color my-3"></div>
 
-                                    <div class="flex gap-4">
+                                    <div class="flex gap-1 pr-3">
 
 
 
@@ -491,8 +490,8 @@
 
 
 
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="src/js/main.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./src/js/main.js"></script>
 </body>
 
 </html>

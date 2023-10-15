@@ -163,6 +163,11 @@ window.onload = function() {
 
 
 
+    $("#print_btn").click(function(){
+        window.print();
+    })
+
+
 // $("#delete").click(function(){
 
 //     $.ajax({

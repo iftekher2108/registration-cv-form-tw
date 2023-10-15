@@ -20,25 +20,27 @@ include "./connection.php";
   
 // }
 
-$uploadDir = "./upload/";
+
 
 // File information
-$fileName = $_FILES["photo"]["name"] ;
-$tempFile = $_FILES["photo"]["tmp_name"];
-$targetFile = $uploadDir . $fileName;
-$file = move_uploaded_file($tempFile, $targetFile);
-
-
+$uploadDir = "../upload/";
 
 // photo upload with file
-
-
+$photoName = rand(999,9999999).date("Y-m-d-h-i-s")."-". $_FILES["photo"]["name"] ;
+$tempFile = $_FILES["photo"]["tmp_name"];
 
     // Move the uploaded file
+move_uploaded_file($tempFile,$uploadDir . $photoName);
+
+
+
+
+
+
+
 
       // Insert information into the database
      
-
     $fname = $_POST['fname']; // 1
 
 
@@ -97,7 +99,7 @@ $file = move_uploaded_file($tempFile, $targetFile);
   //   }
 
 
-    $sql_insert = "INSERT INTO cv_data (photo,fname, lname, a_designation, email, phone, brith_date, present_address, parmanent_address, gender, career_objective, e_institute, e_start_date, e_end_date, e_duration, e_department, degree, result, technical_skills, language, hobby, activity, c_institute, c_start_date, c_end_date, c_duration, c_designation) VALUES ('$targetFile','$fname','$lname','$a_designation','$email','$phone','$brith_date','$present_address','$parmanent_address','$gender','$career_objective','$e_institute','$e_start_date','$e_end_date','$e_duration','$e_department','$degree','$result','$technical_skills','$language','$hobby','$activity','$c_institute','$c_start_date','$c_end_date','$c_duration','$c_designation')";
+    $sql_insert = "INSERT INTO cv_data (photo,fname, lname, a_designation, email, phone, brith_date, present_address, parmanent_address, gender, career_objective, e_institute, e_start_date, e_end_date, e_duration, e_department, degree, result, technical_skills, language, hobby, activity, c_institute, c_start_date, c_end_date, c_duration, c_designation) VALUES ('$photoName','$fname','$lname','$a_designation','$email','$phone','$brith_date','$present_address','$parmanent_address','$gender','$career_objective','$e_institute','$e_start_date','$e_end_date','$e_duration','$e_department','$degree','$result','$technical_skills','$language','$hobby','$activity','$c_institute','$c_start_date','$c_end_date','$c_duration','$c_designation')";
 
     if ($con->query($sql_insert) === TRUE) {
       // echo "New record created successfully";
