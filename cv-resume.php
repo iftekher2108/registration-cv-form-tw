@@ -70,7 +70,7 @@
                             <img src="./src/image/teal-color.png" alt="header-img">
                         </div>
                         <div class="h-36 w-36 overflow-hidden rounded-full ml-5  z-20  mx-10  p-5">
-                            <img src="./src/image/photo.png" class="rounded-full" />
+                            <img src="<?php echo $row['photo'];?>" class="rounded-full" />
                         </div>
 
                         <div class="w-2/3 sm:text-center pl-5 z-10 mt-10 text-start">

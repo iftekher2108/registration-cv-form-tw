@@ -5,18 +5,39 @@ include "./connection.php";
 
 // photo upload with file
 
-$photo_name = $_FILES["choosefile"]["photo"];
+// if(isset($_POST['submit'])) {
 
-$temp_photo_name = $_FILES["choosefile"]["tmp_photo"];  
+//   $photo_name = $_FILES["choosefile"]["photo"];
 
-    $photo_folder = "image/".$photo_name;  
+//   $temp_photo_name = $_FILES["choosefile"]["tmp_photo"];  
+  
+//       $photo_folder = "../upload/".$photo_name;  
+  
+//       move_uploaded_file($temp_photo_name, $photo_folder);
 
-    move_uploaded_file($temp_photo_name, $photo_folder);
+
+
+  
+// }
+
+$uploadDir = "./upload/";
+
+// File information
+$fileName = $_FILES["photo"]["name"] ;
+$tempFile = $_FILES["photo"]["tmp_name"];
+$targetFile = $uploadDir . $fileName;
+$file = move_uploaded_file($tempFile, $targetFile);
+
+
 
 // photo upload with file
 
 
 
+    // Move the uploaded file
+
+      // Insert information into the database
+     
 
     $fname = $_POST['fname']; // 1
 
@@ -76,14 +97,16 @@ $temp_photo_name = $_FILES["choosefile"]["tmp_photo"];
   //   }
 
 
-    $sql_insert = "INSERT INTO cv_data (photo,fname, lname, a_designation, email, phone, brith_date, present_address, parmanent_address, gender, career_objective, e_institute, e_start_date, e_end_date, e_duration, e_department, degree, result, technical_skills, language, hobby, activity, c_institute, c_start_date, c_end_date, c_duration, c_designation) VALUES ('','$fname','$lname','$a_designation','$email','$phone','$brith_date','$present_address','$parmanent_address','$gender','$career_objective','$e_institute','$e_start_date','$e_end_date','$e_duration','$e_department','$degree','$result','$technical_skills','$language','$hobby','$activity','$c_institute','$c_start_date','$c_end_date','$c_duration','$c_designation')";
+    $sql_insert = "INSERT INTO cv_data (photo,fname, lname, a_designation, email, phone, brith_date, present_address, parmanent_address, gender, career_objective, e_institute, e_start_date, e_end_date, e_duration, e_department, degree, result, technical_skills, language, hobby, activity, c_institute, c_start_date, c_end_date, c_duration, c_designation) VALUES ('$targetFile','$fname','$lname','$a_designation','$email','$phone','$brith_date','$present_address','$parmanent_address','$gender','$career_objective','$e_institute','$e_start_date','$e_end_date','$e_duration','$e_department','$degree','$result','$technical_skills','$language','$hobby','$activity','$c_institute','$c_start_date','$c_end_date','$c_duration','$c_designation')";
 
     if ($con->query($sql_insert) === TRUE) {
       // echo "New record created successfully";
-      return header("refresh:0.5, url=../index.html");  
+      // return header("refresh:0.5, url=../index.html");  
     } else {
       echo "Error: " . $sql . "<br>" . $con->error;
     }
+
+
 
 
 
