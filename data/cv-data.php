@@ -14,7 +14,7 @@ while ($row = mysqli_fetch_array($execute)) {
 
     <tr>
         <td> <?php echo $i; ?></td>
-        <td><img src="./upload/<?php echo $row['photo']; ?>" class=" max-h-10 h-10 "  alt="photo"></td>
+        <td class=""><img src="./upload/<?php echo $row['photo']; ?>" class=" h-10 w-10 self-center rounded-full"  alt="photo"></td>
         <td><?php echo $row['fname']. " ".$row['lname']; ?></td>
         <td><?php echo $row['phone']; ?></td>
         <td><?php echo $row['email']; ?> </td>

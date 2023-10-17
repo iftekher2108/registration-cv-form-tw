@@ -13,7 +13,9 @@
 <body>
 
     <div class=" flex items-center justify-center bg-slate-700 py-14 p-52 top-0">
-        <a href="cv-data.html" class="no-underline w-full hover:opacity-80"><button class="bg-cyan-400 w-full rounded-md text-center text-white text-opacity-80 font-bold px-8 py-2">Show Data</button></a>
+        <a href="cv-data.html" class="no-underline w-full hover:opacity-80"><button
+                class="bg-cyan-400 w-full rounded-md text-center text-white text-opacity-80 font-bold px-8 py-2">
+                Show Data</button></a>
     </div>
 
     <div class=" font-robotoMono min-h-screen antialiased md:subpixel-antialiased p-10 flex items-center justify-center select-none"
@@ -27,8 +29,11 @@
                 registration form</h1>
 
 
-            <form action="./data/action.php" class="flex items-start h-screen   overflow-x-hidden relative  justify-center p-6 " method="post"
+            <form action="./data/action.php"
+                class="flex items-start h-screen   overflow-x-hidden relative  justify-center p-6 " method="post"
                 enctype="multipart/form-data">
+
+                <!-- form section one -->
                 <div id="form-section-1" class="">
 
                     <div class="w-full lg:flex flex-row gap-2 lg:mb-2">
@@ -118,7 +123,7 @@
                         <label for="photo" class="mb-1 text-cyan-500 font-bold text-opacity-75">Submit Photo</label>
                         <input type="file"
                             class="w-full mb-2  file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-cyan-500 file:text-white hover:file:bg-cyan-800 px-4 py-1 rounded-full text-white focus:outline-none focus:file:ring-2 focus:file:ring-cyan-500 "
-                            name="photo" id="photo" accept="image/png, image/gif, image/jpeg" >
+                            name="photo" id="photo" accept="image/png, image/gif, image/jpeg">
                     </div>
 
 
@@ -144,146 +149,152 @@
                 <div id="form-section-2" class=" absolute m-6 left-full">
 
 
-                    
-                <!-- career objective -->
-                <div class="w-full mb-2">
-                    <label for="career-objective" class="mb-1 text-cyan-500 font-bold text-opacity-75">Career
-                        Objective</label>
-                    <textarea name="career_objective" id="career-objective"
-                        class="w-full lg:mb-0 md:mb-2 resize-none sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                        placeholder="Career Objective" rows="4" required></textarea>
-                </div>
-                <!-- career objective -->
 
-
-                <!-- education qualification -->
-                <div class="education w-full">
+                    <!-- career objective -->
                     <div class="w-full mb-2">
-                        <label for="e-institute"
-                            class="mb-1 text-cyan-500 font-bold text-opacity-75">School/College/University </label>
-                        <input type="text"
-                            class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 capitalize shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                            name="e_institute" id="e-institute" placeholder="Institute Name" required>
+                        <label for="career-objective" class="mb-1 text-cyan-500 font-bold text-opacity-75">Career
+                            Objective</label>
+                        <textarea name="career_objective" id="career-objective"
+                            class="w-full lg:mb-0 md:mb-2 resize-none sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                            placeholder="Career Objective" rows="4" required></textarea>
+                    </div>
+                    <!-- career objective -->
+
+
+                    <!-- education qualification -->
+                    <div class="education w-full">
+                        <div class="w-full mb-2">
+                            <label for="e-institute"
+                                class="mb-1 text-cyan-500 font-bold text-opacity-75">School/College/University </label>
+                            <input type="text"
+                                class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 capitalize shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                name="e_institute" id="e-institute" placeholder="Institute Name" required>
+                        </div>
+
+
+                        <div class="w-full lg:flex flex-row gap-2 lg:mb-2">
+
+
+                            <div class="w-full">
+                                <label for="e-start-date" class="mb-1 text-cyan-500 font-bold text-opacity-75">Start
+                                    Date</label>
+                                <input type="date"
+                                    class="w-full lg:mb-0 md:mb-2 sm:mb-2 capitalize px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                    name="e_start_date" onchange="year_calculate()" id="e-start-date"
+                                    placeholder="Start Date" required>
+                            </div>
+
+                            <div class="w-full">
+                                <label for="e-end-date" class="mb-1 text-cyan-500 font-bold text-opacity-75">End
+                                    Date</label>
+                                <input type="date"
+                                    class="w-full lg:mb-0 md:mb-2 capitalize sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                    name="e_end_date" onchange="year_calculate()" id="e-end-date" placeholder="End Date"
+                                    required>
+                            </div>
+
+                            <div class="w-full">
+                                <label for="e-duration"
+                                    class="mb-1 text-cyan-500 font-bold text-opacity-75">Duration</label>
+                                <input type="text"
+                                    class="w-full lg:mb-0 md:mb-2 sm:mb-2 capitalize px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                    name="e_duration" id="e-duration" placeholder="Study Time" autocomplete="off"
+                                    required>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="w-full lg:flex flex-row gap-2 mb-2">
+                            <div class="w-full">
+                                <label for="e-department"
+                                    class="mb-1 text-cyan-500 font-bold text-opacity-75">Department/Subject </label>
+                                <input type="text"
+                                    class="w-full lg:mb-0 md:mb-2 sm:mb-2 capitalize px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                    name="e_department" id="e-department" placeholder="Study Subject" required>
+                            </div>
+
+                            <div class="w-full">
+                                <label for="degree" class="mb-1 text-cyan-500 font-bold text-opacity-75">Degree </label>
+                                <input type="text"
+                                    class="w-full lg:mb-0 md:mb-2 sm:mb-2 capitalize px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                    name="degree" id="degree" placeholder="Degree" required>
+                            </div>
+
+                            <div class="w-full  ">
+                                <label for="result" class="mb-1 text-cyan-500 font-bold text-opacity-75">CGPA/GPA
+                                    Scale</label>
+                                <input type="text"
+                                    class="w-full lg:mb-0 md:mb-2 sm:mb-2 capitalize px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                    name="result" id="result" placeholder="Result" autocomplete="off" required>
+                            </div>
+
+                        </div>
+
                     </div>
 
+                    <!-- educational qualification -->
 
-                    <div class="w-full lg:flex flex-row gap-2 lg:mb-2">
+                    <!-- education add btn -->
+
+                    <button
+                        class=" w-1/2 transition-all   duration-300 ease-in-out hover:opacity-70 bg-cyan-500  text-white font-semibold  lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 ">Add
+                        New</button>
+
+                    <!-- education add btn -->
 
 
-                        <div class="w-full">
-                            <label for="e-start-date" class="mb-1 text-cyan-500 font-bold text-opacity-75">Start
-                                Date</label>
-                            <input type="date"
-                                class="w-full lg:mb-0 md:mb-2 sm:mb-2 capitalize px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                                name="e_start_date" onchange="year_calculate()" id="e-start-date" placeholder="Start Date" required>
-                        </div>
 
-                        <div class="w-full">
-                            <label for="e-end-date" class="mb-1 text-cyan-500 font-bold text-opacity-75">End Date</label>
-                            <input type="date"
-                                class="w-full lg:mb-0 md:mb-2 capitalize sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                                name="e_end_date" onchange="year_calculate()" id="e-end-date" placeholder="End Date" required>
-                        </div>
 
-                        <div class="w-full">
-                            <label for="e-duration" class="mb-1 text-cyan-500 font-bold text-opacity-75">Study
-                                Time</label>
-                            <input type="text"
-                                class="w-full lg:mb-0 md:mb-2 sm:mb-2 capitalize px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                                name="e_duration" id="e-duration" placeholder="Study Time" autocomplete="off" required>
-                        </div>
+                    <!-- technical skills -->
+                    <div class="w-full mb-2">
+                        <label for="technical-skills" class="mb-1 text-cyan-500 font-bold text-opacity-75">Technical
+                            Skills</label>
+                        <textarea name="technical_skills" id="technical-skills"
+                            class="w-full lg:mb-0 md:mb-2 resize-none sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                            placeholder="Technical Skills" rows="2" required></textarea>
+                    </div>
+                    <!-- technical skills -->
 
+                    <!-- comunication language -->
+                    <div class="w-full mb-2">
+                        <label for="comunication-lan" class="mb-1 text-cyan-500 font-bold text-opacity-75">Comunication
+                            Skills</label>
+                        <textarea name="language" id="comunication-lan"
+                            class="w-full lg:mb-0 resize-none md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                            placeholder="Comunication Language" rows="1" required></textarea>
                     </div>
 
+                    <!-- comunication language -->
 
 
-                    <div class="w-full lg:flex flex-row gap-2 mb-2">
-                        <div class="w-full">
-                            <label for="e-department"
-                                class="mb-1 text-cyan-500 font-bold text-opacity-75">Department/Subject </label>
-                            <input type="text"
-                                class="w-full lg:mb-0 md:mb-2 sm:mb-2 capitalize px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                                name="e_department" id="e-department" placeholder="Study Subject" required>
-                        </div>
 
-                        <div class="w-full">
-                            <label for="degree" class="mb-1 text-cyan-500 font-bold text-opacity-75">Degree </label>
-                            <input type="text"
-                                class="w-full lg:mb-0 md:mb-2 sm:mb-2 capitalize px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                                name="degree" id="degree" placeholder="Degree" required>
-                        </div>
+                    <!-- hobby / interested -->
 
-                        <div class="w-full  ">
-                            <label for="result" class="mb-1 text-cyan-500 font-bold text-opacity-75">CGPA/GPA
-                                Scale</label>
-                            <input type="text"
-                                class="w-full lg:mb-0 md:mb-2 sm:mb-2 capitalize px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                                name="result" id="result" placeholder="Result" autocomplete="off" required>
-                        </div>
-
+                    <div class="w-full mb-2">
+                        <label for="hobby"
+                            class="mb-1 text-cyan-500 font-bold text-opacity-75">Hobby/Interrested</label>
+                        <textarea name="hobby" id="hobby"
+                            class="w-full lg:mb-0 md:mb-2 resize-none sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                            placeholder="Hobby / Interrested" rows="3" required></textarea>
                     </div>
 
-                </div>
-
-                <!-- educational qualification -->
-
-                <!-- education add btn -->
-
-                <button
-                    class=" w-1/2 transition-all   duration-300 ease-in-out hover:opacity-70 bg-cyan-500  text-white font-semibold  lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 ">Add
-                    New</button>
-
-                <!-- education add btn -->
+                    <!-- hobby / interested -->
 
 
 
+                    <div class="flex gap-3 w-full ">
 
-                <!-- technical skills -->
-                <div class="w-full mb-2">
-                    <label for="technical-skills" class="mb-1 text-cyan-500 font-bold text-opacity-75">Technical
-                        Skills</label>
-                    <textarea name="technical_skills" id="technical-skills"
-                        class="w-full lg:mb-0 md:mb-2 resize-none sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                        placeholder="Technical Skills" rows="2" required></textarea>
-                </div>
-                <!-- technical skills -->
+                        <button id="btn-section-2-prev"
+                            class=" w-full my-12 transition-all duration-300 ease-in-out hover:opacity-70 bg-gradient-to-l from-blue-400 via-teal-600 to-green-400 hover:bg-gradient-to-r self-end text-white font-semibold  lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500">Previous
+                            Step</button>
 
-                <!-- comunication language -->
-                <div class="w-full mb-2">
-                    <label for="comunication-lan" class="mb-1 text-cyan-500 font-bold text-opacity-75">Comunication
-                        Skills</label>
-                    <textarea name="language" id="comunication-lan"
-                        class="w-full lg:mb-0 resize-none md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                        placeholder="Comunication Language" rows="1" required></textarea>
-                </div>
+                        <button id="btn-section-2"
+                            class=" w-full my-12 transition-all duration-300 ease-in-out hover:opacity-70 bg-gradient-to-l from-blue-400 via-teal-600 to-green-400 hover:bg-gradient-to-r self-end text-white font-semibold  lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500">Next
+                            Step</button>
+                    </div>
 
-                <!-- comunication language -->
-
-
-
-                <!-- hobby / interested -->
-
-                <div class="w-full mb-2">
-                    <label for="hobby" class="mb-1 text-cyan-500 font-bold text-opacity-75">Hobby/Interrested</label>
-                    <textarea name="hobby" id="hobby"
-                        class="w-full lg:mb-0 md:mb-2 resize-none sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                        placeholder="Hobby / Interrested" rows="3" required></textarea>
-                </div>
-
-                <!-- hobby / interested -->
-
-
-
-                <div class="flex gap-3 w-full ">
-
-                    <button id="btn-section-2-prev"
-                  class=" w-full my-12 transition-all duration-300 ease-in-out hover:opacity-70 bg-gradient-to-l from-blue-400 via-teal-600 to-green-400 hover:bg-gradient-to-r self-end text-white font-semibold  lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500">Previous Step</button>
-
-                  <button id="btn-section-2"
-                      class=" w-full my-12 transition-all duration-300 ease-in-out hover:opacity-70 bg-gradient-to-l from-blue-400 via-teal-600 to-green-400 hover:bg-gradient-to-r self-end text-white font-semibold  lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500">Next
-                      Step</button>     
-                  </div>
-                
 
 
 
@@ -299,84 +310,237 @@
 
 
 
+
                 <!-- form section three -->
                 <div id="form-section-3" class="absolute m-6 left-full">
 
 
-                    
-
-                <!-- career objective -->
-                <div class="w-full mb-2">
-                    <label for="cariculam-activity" class="mb-1 text-cyan-500 font-bold text-opacity-75">Cariculam
-                        Activity</label>
-                    <textarea name="activity" id="cariculam-activity"
-                        class="w-full lg:mb-0 md:mb-2 resize-none sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                        placeholder="Cariculam Activity" rows="4"></textarea>
-                </div>
-                <!-- career objective -->
-
-
-                <!-- education qualification -->
-
-                <div class="company w-full">
-
-                    <div class="w-full mb-2">
-                        <label for="c-institute" class="mb-1 text-cyan-500 font-bold text-opacity-75">Company Name
-                            </label>
-                        <input type="text"
-                            class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                            name="c_institute" id="c-institute" placeholder="Institute Name">
-                    </div>
-
 
                     <div class="w-full lg:flex flex-row gap-2 lg:mb-2">
-            
-
                         <div class="w-full">
-                            <label for="c-start-date" class="mb-1 text-cyan-500 font-bold text-opacity-75">Start
-                                Date</label>
-                            <input type="date"
-                                class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                                name="c_start_date" id="c-start-date" placeholder="Start Date">
-                        </div>
-
-                        <div class="w-full">
-                            <label for="c-end-date" class="mb-1 text-cyan-500 font-bold text-opacity-75">End Date</label>
-                            <input type="date"
-                                class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                                name="c_end_date" id="c-end-date" placeholder="End Date">
-                        </div>
-
-                        <div class="w-full">
-                            <label for="c-duration" class="mb-1 text-cyan-500 font-bold text-opacity-75">Duration</label>
+                            <label for="father-name" class="mb-1 text-cyan-500 font-bold text-opacity-75">Father Name</label>
                             <input type="text"
                                 class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                                name="c_duration" id="c-duration" placeholder="Work Time" autocomplete="off">
+                                name="father_name" id="father-name" placeholder="Father Name" required>
+                        </div>
+
+                        <div class="w-full">
+                            <label for="mother-name" class="mb-1 text-cyan-500 font-bold text-opacity-75">Mother Name</label>
+                            <input type="text"
+                                class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                name="mother_name" id="mother-name" placeholder="Mother Name" required>
                         </div>
 
                     </div>
 
 
 
-                    <div class="w-full lg:flex flex-row gap-2 mb-2">
-                        <div class="w-full">
-                            <label for="c-designation" class="mb-1 text-cyan-500 font-bold text-opacity-75">Designation
+
+
+
+                    <!-- cariculam acitivity -->
+                    <div class="w-full mb-2">
+                        <label for="cariculam-activity" class="mb-1 text-cyan-500 font-bold text-opacity-75">Cariculam
+                            Activity</label>
+                        <textarea name="activity" id="cariculam-activity"
+                            class="w-full lg:mb-0 md:mb-2 resize-none sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                            placeholder="Cariculam Activity" rows="4"></textarea>
+                    </div>
+                    <!-- cariculam activity -->
+
+
+                    <!-- job experince -->
+
+                    <div class="company w-full">
+
+                        <div class="w-full mb-2">
+                            <label for="c-institute" class="mb-1 text-cyan-500 font-bold text-opacity-75">Company Name
                             </label>
                             <input type="text"
                                 class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
-                                name="c_designation" id="c-designation" placeholder="Designation">
+                                name="c_institute" id="c-institute" placeholder="Institute Name">
+                        </div>
+
+
+                        <div class="w-full lg:flex flex-row gap-2 lg:mb-2">
+
+
+                            <div class="w-full">
+                                <label for="c-start-date" class="mb-1 text-cyan-500 font-bold text-opacity-75">Start
+                                    Date</label>
+                                <input type="date"
+                                    class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                    name="c_start_date" id="c-start-date" placeholder="Start Date">
+                            </div>
+
+                            <div class="w-full">
+                                <label for="c-end-date" class="mb-1 text-cyan-500 font-bold text-opacity-75">End
+                                    Date</label>
+                                <input type="date"
+                                    class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                    name="c_end_date" id="c-end-date" placeholder="End Date">
+                            </div>
+
+                            <div class="w-full">
+                                <label for="c-duration"
+                                    class="mb-1 text-cyan-500 font-bold text-opacity-75">Duration</label>
+                                <input type="text"
+                                    class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                    name="c_duration" id="c-duration" placeholder="Work Time" autocomplete="off">
+                            </div>
+
                         </div>
 
 
 
+                        <div class="w-full lg:flex flex-row gap-2 mb-2">
+                            <div class="w-full">
+                                <label for="c-designation"
+                                    class="mb-1 text-cyan-500 font-bold text-opacity-75">Designation
+                                </label>
+                                <input type="text"
+                                    class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                    name="c_designation" id="c-designation" placeholder="Designation">
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
+                    <!-- job experince -->
+
+
+                    <!-- <div class="w-full ">
+                    <label for="cv-resume" class="mb-1 text-cyan-500 font-bold text-opacity-75">Submit Resume</label>
+                    <input type="file"
+                        class="w-full mb-2  file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-cyan-500 file:text-white hover:file:bg-cyan-800 px-4 py-1 rounded-full text-white focus:outline-none focus:file:ring-2 focus:file:ring-cyan-500 "
+                        name="cv_resume" id="cv-resume" >
+                </div> -->
+
+
+
+
+
+
+
+                    <!-- <div class="flex gap-3 w-full ">
+
+                        <button id="btn-section-3-prev"
+                            class=" w-full my-12 transition-all duration-300 ease-in-out hover:opacity-70 bg-gradient-to-l from-blue-400 via-teal-600 to-green-400 hover:bg-gradient-to-r self-end text-white font-semibold  lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500">Previous
+                            Step</button>
+
+                        <input type="submit" value="Submit" id="local-clear"
+                            class=" w-full my-12 transition-all duration-300 ease-in-out hover:opacity-70 bg-gradient-to-l from-blue-400 via-teal-600 to-green-400 hover:bg-gradient-to-r self-end text-white font-semibold  lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                    </div> -->
+
+
+                    <div class="flex gap-3 w-full ">
+
+                        <button id="btn-section-3-prev"
+                            class=" w-full my-12 transition-all duration-300 ease-in-out hover:opacity-70 bg-gradient-to-l from-blue-400 via-teal-600 to-green-400 hover:bg-gradient-to-r self-end text-white font-semibold  lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500">Previous
+                            Step</button>
+
+                        <button id="btn-section-3"
+                            class=" w-full my-12 transition-all duration-300 ease-in-out hover:opacity-70 bg-gradient-to-l from-blue-400 via-teal-600 to-green-400 hover:bg-gradient-to-r self-end text-white font-semibold  lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500">Next
+                            Step</button>
                     </div>
 
                 </div>
+                <!-- form section three -->
 
-                <!-- educational qualification -->
 
 
-                <!-- <div class="w-full ">
+
+
+
+
+
+
+
+
+                <!-- form section four -->
+                <div id="form-section-4" class="absolute m-6 left-full">
+
+
+
+
+                    <!-- career objective -->
+                    <div class="w-full mb-2">
+                        <label for="cariculam-activity" class="mb-1 text-cyan-500 font-bold text-opacity-75">Cariculam
+                            Activity</label>
+                        <textarea name="activity" id="cariculam-activity"
+                            class="w-full lg:mb-0 md:mb-2 resize-none sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                            placeholder="Cariculam Activity" rows="4"></textarea>
+                    </div>
+                    <!-- career objective -->
+
+
+                    <!-- education qualification -->
+
+                    <div class="company w-full">
+
+                        <div class="w-full mb-2">
+                            <label for="c-institute" class="mb-1 text-cyan-500 font-bold text-opacity-75">Company Name
+                            </label>
+                            <input type="text"
+                                class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                name="c_institute" id="c-institute" placeholder="Institute Name">
+                        </div>
+
+
+                        <div class="w-full lg:flex flex-row gap-2 lg:mb-2">
+
+
+                            <div class="w-full">
+                                <label for="c-start-date" class="mb-1 text-cyan-500 font-bold text-opacity-75">Start
+                                    Date</label>
+                                <input type="date"
+                                    class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                    name="c_start_date" id="c-start-date" placeholder="Start Date">
+                            </div>
+
+                            <div class="w-full">
+                                <label for="c-end-date" class="mb-1 text-cyan-500 font-bold text-opacity-75">End
+                                    Date</label>
+                                <input type="date"
+                                    class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                    name="c_end_date" id="c-end-date" placeholder="End Date">
+                            </div>
+
+                            <div class="w-full">
+                                <label for="c-duration"
+                                    class="mb-1 text-cyan-500 font-bold text-opacity-75">Duration</label>
+                                <input type="text"
+                                    class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                    name="c_duration" id="c-duration" placeholder="Work Time" autocomplete="off">
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="w-full lg:flex flex-row gap-2 mb-2">
+                            <div class="w-full">
+                                <label for="c-designation"
+                                    class="mb-1 text-cyan-500 font-bold text-opacity-75">Designation
+                                </label>
+                                <input type="text"
+                                    class="w-full lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 "
+                                    name="c_designation" id="c-designation" placeholder="Designation">
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
+                    <!-- educational qualification -->
+
+
+                    <!-- <div class="w-full ">
                     <label for="cv-resume" class="mb-1 text-cyan-500 font-bold text-opacity-75">Submit Resume</label>
                     <input type="file"
                         class="w-full mb-2  file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-cyan-500 file:text-white hover:file:bg-cyan-800 px-4 py-1 rounded-full text-white focus:outline-none focus:file:ring-2 focus:file:ring-cyan-500 "
@@ -391,15 +555,16 @@
 
                     <div class="flex gap-3 w-full ">
 
-                      <button id="btn-section-3-prev"
-                    class=" w-full my-12 transition-all duration-300 ease-in-out hover:opacity-70 bg-gradient-to-l from-blue-400 via-teal-600 to-green-400 hover:bg-gradient-to-r self-end text-white font-semibold  lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500">Previous Step</button>
+                        <button id="btn-section-4-prev"
+                            class=" w-full my-12 transition-all duration-300 ease-in-out hover:opacity-70 bg-gradient-to-l from-blue-400 via-teal-600 to-green-400 hover:bg-gradient-to-r self-end text-white font-semibold  lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500">Previous
+                            Step</button>
 
-                    <input type="submit" value="Submit" id="local-clear"
-                        class=" w-full my-12 transition-all duration-300 ease-in-out hover:opacity-70 bg-gradient-to-l from-blue-400 via-teal-600 to-green-400 hover:bg-gradient-to-r self-end text-white font-semibold  lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500">    
+                        <input type="submit" value="Submit" id="local-clear"
+                            class=" w-full my-12 transition-all duration-300 ease-in-out hover:opacity-70 bg-gradient-to-l from-blue-400 via-teal-600 to-green-400 hover:bg-gradient-to-r self-end text-white font-semibold  lg:mb-0 md:mb-2 sm:mb-2 px-4 py-2 shadow-lg rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500">
                     </div>
-                 
+
                 </div>
-                <!-- form section three -->
+                <!-- form section four -->
 
 
 
@@ -419,7 +584,7 @@
 
     </div>
 
-    
+
 
 
 

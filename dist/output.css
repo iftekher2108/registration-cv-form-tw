@@ -668,10 +668,6 @@ td {
   inset: -0.25rem;
 }
 
-.-left-2 {
-  left: -0.5rem;
-}
-
 .end-1 {
   inset-inline-end: 0.25rem;
 }
@@ -698,14 +694,6 @@ td {
 
 .-z-20 {
   z-index: -20;
-}
-
-.z-10 {
-  z-index: 10;
-}
-
-.z-20 {
-  z-index: 20;
 }
 
 .z-30 {
@@ -967,16 +955,16 @@ td {
   height: 100vh;
 }
 
-.max-h-10 {
-  max-height: 2.5rem;
-}
-
 .min-h-screen {
   min-height: 100vh;
 }
 
 .w-1\/2 {
   width: 50%;
+}
+
+.w-10 {
+  width: 2.5rem;
 }
 
 .w-2\/3 {
@@ -2039,6 +2027,11 @@ td {
   background-color: rgb(45 212 191 / var(--tw-bg-opacity));
 }
 
+.bg-top-color {
+  --tw-bg-opacity: 1;
+  background-color: rgb(65 145 151 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-l {
   background-image: linear-gradient(to left, var(--tw-gradient-stops));
 }
@@ -2170,6 +2163,10 @@ td {
 
 .p-10 {
   padding: 2.5rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .p-5 {
@@ -2330,6 +2327,10 @@ td {
 
 .font-medium {
   font-weight: 500;
+}
+
+.font-normal {
+  font-weight: 400;
 }
 
 .font-semibold {
