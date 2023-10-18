@@ -77,6 +77,20 @@ move_uploaded_file($tempFile,$uploadDir . $photoName);
     $c_duration = $_POST['c_duration']; // 25
     $c_designation = $_POST['c_designation']; // 26
 
+    $father_name = $_POST['father_name']; // 27
+    $mother_name = $_POST['mother_name']; // 28
+    $nationality = $_POST['nationality']; // 29
+    $religion = $_POST['religion']; // 30
+    $m_status = $_POST['m_status']; // 31
+    $nid = $_POST['nid']; // 32
+    $ref_name = $_POST['ref_name']; // 33
+    $ref_company = $_POST['ref_company']; // 34
+    $ref_designation = $_POST['ref_designation']; // 35
+    $ref_relation = $_POST['ref_relation']; // 36
+    $ref_email = $_POST['ref_email']; // 37
+    $ref_phone = $_POST['ref_phone']; // 38
+
+
 
 
 
@@ -99,12 +113,19 @@ move_uploaded_file($tempFile,$uploadDir . $photoName);
   //   }
 
 
-    $sql_insert = "INSERT INTO cv_data (photo,fname, lname, a_designation, email, phone, brith_date, present_address, parmanent_address, gender, career_objective, e_institute, e_start_date, e_end_date, e_duration, e_department, degree, result, technical_skills, language, hobby, activity, c_institute, c_start_date, c_end_date, c_duration, c_designation) VALUES ('$photoName','$fname','$lname','$a_designation','$email','$phone','$brith_date','$present_address','$parmanent_address','$gender','$career_objective','$e_institute','$e_start_date','$e_end_date','$e_duration','$e_department','$degree','$result','$technical_skills','$language','$hobby','$activity','$c_institute','$c_start_date','$c_end_date','$c_duration','$c_designation')";
+    $sql_insert = "INSERT INTO cv_data (photo,fname, lname, a_designation, email, phone, brith_date, present_address, parmanent_address, gender, career_objective, e_institute, e_start_date, e_end_date, e_duration, e_department, degree, result, technical_skills, language, hobby, activity, c_institute, c_start_date, c_end_date, c_duration, c_designation,father_name, mother_name, nationality, marital_status, religion, nid, ref_name, ref_company, ref_designation, ref_phone, ref_relation, ref_email ) 
+    VALUES ('$photoName','$fname','$lname','$a_designation','$email','$phone','$brith_date','$present_address','$parmanent_address','$gender','$career_objective','$e_institute','$e_start_date','$e_end_date','$e_duration','$e_department','$degree','$result','$technical_skills','$language','$hobby','$activity','$c_institute','$c_start_date','$c_end_date','$c_duration','$c_designation','$father_name', '$mother_name', '$nationality', '$m_status', '$religion', '$nid', '$ref_name', '$ref_company', '$ref_designation', $ref_phone, '$ref_relation', '$ref_email')";
 
-    $backup ="INSERT INTO cv_data_backup SELECT * FROM cv_data";
 
+
+
+
+
+
+    
     if ($con->query($sql_insert) === TRUE) {
-      // echo "New record created successfully";
+
+      $backup ="INSERT INTO cv_data_backup SELECT * FROM cv_data";
       return header("refresh:0.1, url=../index.html");  
     } else {
       echo "Error: " . $sql . "<br>" . $con->error;

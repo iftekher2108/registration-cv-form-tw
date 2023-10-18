@@ -383,16 +383,16 @@
                                     <ul>
 
                                         <pre class="capitalize font-normal"><span class="font-semibold">Name             </span> :<?php echo $row['fname'] . " " . $row['lname']; ?></pre>
-                                        <pre class="capitalize font-normal"><span class="font-semibold">Mother Name      </span> :<?php echo $row['technical_skills']; ?></pre>
-                                        <pre class="capitalize font-normal"><span class="font-semibold">Father name      </span> :<?php echo $row['technical_skills']; ?></pre>
+                                        <pre class="capitalize font-normal"><span class="font-semibold">Fother Name      </span> :<?php echo $row['father_name']; ?></pre>
+                                        <pre class="capitalize font-normal"><span class="font-semibold">Mather name      </span> :<?php echo $row['mother_name']; ?></pre>
                                         <pre class="capitalize font-normal"><span class="font-semibold">Date Of Birth    </span> :<?php echo $row['brith_date']; ?></pre>
-                                        <pre class="capitalize font-normal"><span class="font-semibold">Nationality      </span> :<?php echo $row['technical_skills']; ?></pre>
-                                        <pre class="capitalize font-normal"><span class="font-semibold">Marital status   </span> :<?php echo $row['technical_skills']; ?></pre>
+                                        <pre class="capitalize font-normal"><span class="font-semibold">Nationality      </span> :<?php echo $row['nationality']; ?></pre>
+                                        <pre class="capitalize font-normal"><span class="font-semibold">Marital status   </span> :<?php echo $row['marital_status']; ?></pre>
                                         <pre class="capitalize font-normal"><span class="font-semibold">Present Address  </span> :<?php echo $row['present_address']; ?></pre>
                                         <pre class="capitalize font-normal"><span class="font-semibold">Parmanent Address</span> :<?php echo $row['parmanent_address']; ?></pre>
-                                        <pre class="capitalize font-normal"><span class="font-semibold">Religion         </span> :<?php echo $row['technical_skills']; ?></pre>
+                                        <pre class="capitalize font-normal"><span class="font-semibold">Religion         </span> :<?php echo $row['religion']; ?></pre>
                                         <pre class="capitalize font-normal"><span class="font-semibold">Gender           </span> :<?php echo $row['gender']; ?></pre>
-                                        <pre class="capitalize font-normal"><span class="font-semibold">NID              </span> :<?php echo $row['technical_skills']; ?></pre>
+                                        <pre class="capitalize font-normal"><span class="font-semibold">NID              </span> :<?php echo $row['nid']; ?></pre>
 
                                     </ul>
                                 </div>
@@ -410,38 +410,38 @@
 
 
 
-                                    <div class="flex gap-4 mb-4">
+                                    <div class="mb-2">
 
-                                        <table class="table-auto">
+                                        <table class="table-auto mb-2 bg-slate-300">
                                             <tr>
                                                 <td>Name</td>
-                                                <td>: <?php echo $row['technical_skills']; ?> </td>
+                                                <td>: <?php echo $row['ref_name']; ?> </td>
                                             </tr>
                                             <tr>
                                                 <td>Organigation</td>
-                                                <td>: <?php echo $row['technical_skills']; ?> </td>
+                                                <td>: <?php echo $row['ref_company']; ?> </td>
                                             </tr>
                                             <tr>
                                                 <td>designation</td>
-                                                <td>: <?php echo $row['technical_skills']; ?> </td>
+                                                <td>: <?php echo $row['ref_designation']; ?> </td>
                                             </tr>
                                             <tr>
                                                 <td>Mobile</td>
-                                                <td>: <?php echo $row['technical_skills']; ?> </td>
+                                                <td>: <?php echo $row['ref_phone']; ?> </td>
                                             </tr>
                                             <tr>
                                                 <td>Relation</td>
-                                                <td>: <?php echo $row['technical_skills']; ?> </td>
+                                                <td>: <?php echo $row['ref_relation']; ?> </td>
                                             </tr>
                                             <tr>
                                                 <td>E-mail</td>
-                                                <td>: <?php echo $row['technical_skills']; ?> </td>
+                                                <td>: <?php echo $row['ref_email']; ?> </td>
                                             </tr>
 
                                         </table>
 
 
-                                        <table class="table-auto">
+                                        <table class="table-auto mb-2 bg-slate-300">
                                             <tr>
                                                 <td>Name</td>
                                                 <td>: <?php echo $row['technical_skills']; ?> </td>

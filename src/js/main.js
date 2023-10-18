@@ -168,13 +168,18 @@ local_save("hobby", "hobby")
 
 // form section three
 
-
-
-
-
-
-
-
+local_save("father-name","father-name")
+local_save("mother-name","mother-name")
+local_save("nationality","nationality")
+local_save("religion","religion")
+local_save("m-status","m-status")
+local_save("nid","nid")
+local_save("ref-name","ref-name")
+local_save("ref-organigation","ref-organigation")
+local_save("ref-designation","ref-designation")
+local_save("ref-relation","ref-relation")
+local_save("ref-email","ref-email")
+local_save("ref-phone","ref-phone")
 
 
 // form section three
