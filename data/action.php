@@ -101,9 +101,11 @@ move_uploaded_file($tempFile,$uploadDir . $photoName);
 
     $sql_insert = "INSERT INTO cv_data (photo,fname, lname, a_designation, email, phone, brith_date, present_address, parmanent_address, gender, career_objective, e_institute, e_start_date, e_end_date, e_duration, e_department, degree, result, technical_skills, language, hobby, activity, c_institute, c_start_date, c_end_date, c_duration, c_designation) VALUES ('$photoName','$fname','$lname','$a_designation','$email','$phone','$brith_date','$present_address','$parmanent_address','$gender','$career_objective','$e_institute','$e_start_date','$e_end_date','$e_duration','$e_department','$degree','$result','$technical_skills','$language','$hobby','$activity','$c_institute','$c_start_date','$c_end_date','$c_duration','$c_designation')";
 
+    $backup ="INSERT INTO cv_data_backup SELECT * FROM cv_data";
+
     if ($con->query($sql_insert) === TRUE) {
       // echo "New record created successfully";
-      // return header("refresh:0.5, url=../index.html");  
+      return header("refresh:0.1, url=../index.html");  
     } else {
       echo "Error: " . $sql . "<br>" . $con->error;
     }
